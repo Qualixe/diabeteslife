@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes bounce-medium {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes bounce-fast {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 1.5s infinite;
+}
+
+.animate-bounce-medium {
+  animation: bounce-medium 1.2s infinite;
+}
+
+.animate-bounce-fast {
+  animation: bounce-fast 1s infinite;
+}
+
+@font-face {
+  font-family: 'Apis';
+  src: url('/fonts/Apis-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apis';
+  src: url('/fonts/Apis-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apis';
+  src: url('/fonts/Apis-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body{
+  font-family: 'Apis' Arial;
+}
+
+
+
+@theme {
+  --color-primary:#081965;
+  --color-secondary: #F2F2F2;
+  --color-accent: #3b96de;
+  --color-background:#e5e7ef;
+
+  --font-myfont: "Apis", Arial;
+  --color-one:#3b96de;
+  --color-two:#235ad2;
+  --color-three:#eea7bf;
+  --color-four:#ccc5bd;
+  --color-five:#939aa7;
+  
+
+}
