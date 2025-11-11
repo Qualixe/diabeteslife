@@ -6,8 +6,8 @@ export default function VideoGallery() {
   const video = {
     id: 1,
     title: "Doctor Consulting a Patient",
-    src: "/GalleryVideo1.mp4",
-    poster: "/GalleryVideo1Fallback.avif",
+    src: "/WorldDiabetesDay.mp4",
+    poster: "/WorldDiabetesDay.avif",
   };
 
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -24,25 +24,15 @@ export default function VideoGallery() {
   };
 
   return (
-    <section className="w-full bg-white py-20 px-4 sm:px-6 lg:px-12">
+    <section className="w-full bg-transparent py-5  px-4 sm:px-6 lg:px-10">
       <div className="max-w-[1200px] mx-auto text-center space-y-12">
         {/* Heading */}
-        <div className="space-y-5">
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-black font-myfont leading-tight">
-            Know Diabetes. {" "}
-            <span className="bg-accent bg-clip-text text-transparent ">
-               Act Early.
-            </span>
-          </h2>
-          <p className="text-md sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-myfont">
-            Learn the signs, understand your risk, and take charge of your health. Small action can bring big difference
-          </p>
-        </div>
+   
 
         {/* Single Large Video Card */}
         <div
           onClick={openModal}
-          className="group relative mx-auto w-full max-w-4xl rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-500"
+          className="group relative mx-auto w-full max-w-4xl rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-500"
         >
           {/* Video Thumbnail */}
           <div className="relative aspect-video overflow-hidden">
@@ -59,8 +49,8 @@ export default function VideoGallery() {
 
             {/* Play Button */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-primary/40 backdrop-blur-md rounded-full p-6 sm:p-8 transition-transform duration-400  shadow-xl animate-zoom-in-out">
-                <Play className="text-white w-10 h-10 sm:w-12 sm:h-12 animate-pulse" />
+              <div className="bg-primary/40 backdrop-blur-md rounded-full p-4 md:p-8 transition-transform duration-400  shadow-xl animate-zoom-in-out">
+                <Play className="text-white w-6 h-6 lg:w-10 lg:h-10 sm:w-12 sm:h-12 animate-pulse" />
               </div>
             </div>
 
@@ -100,14 +90,7 @@ export default function VideoGallery() {
         </div>
       )}
 
-      {/* Button */}
-      <div className="max-w-[1000px] mx-auto pt-12 text-center text-sm">
-        <HeroButton text="Learn More" className="mx-auto"
-          href="https://worlddiabetesday.org/"
-        
-        />
 
-      </div>
     </section>
   );
 }

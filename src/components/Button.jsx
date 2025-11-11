@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
-const HeroButton = ({ text = "Click Me", href = "#videos",showArrowClass }) => {
+const HeroButton = ({ text = "Click Me", href = "#videos" }) => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
@@ -16,7 +16,7 @@ const HeroButton = ({ text = "Click Me", href = "#videos",showArrowClass }) => {
     <a
       href={href}
       onMouseMove={handleMouseMove}
-      className="capitalize font-myfont relative inline-flex items-center justify-center px-8 py-4 font-semibold text-white  rounded-[30px] cursor-pointer overflow-hidden group bg-primary transition-colors duration-300"
+      className="font-myfont relative inline-flex items-center justify-center px-4 lg:px-8 sm:px-5 py-2.5 sm:py-4 font-semibold text-white  rounded-[30px] cursor-pointer overflow-hidden group bg-primary transition-colors duration-300"
       target="blank"
     >
       {/* Animated fill circle */}
@@ -34,7 +34,7 @@ const HeroButton = ({ text = "Click Me", href = "#videos",showArrowClass }) => {
       <span className="relative z-10 flex flex-row items-center gap-2 transition-all duration-300">
         {text}
        
-       <ArrowRight className={`transition-transform duration-300 group-hover:translate-x-1 ${showArrowClass}`} />
+       <ArrowRight className={`transition-transform duration-300 group-hover:translate-x-1 w-4 h-4 lg:w-6 lg:h-6 `} />
 
        
       </span>

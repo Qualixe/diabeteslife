@@ -13,14 +13,14 @@ const HowItsWork = () => {
   return (
     <section
       id="howitswork"
-      className="py-16 sm:py-20 md:py-28 bg-white w-full"
+      className="py-12 px-4 md:px-10   md:py-20 bg-white w-full"
     >
       <div
         className="
           max-w-[1200px] mx-auto 
           flex flex-col md:flex-row items-center md:items-start justify-between 
           gap-6 sm:gap-10 md:gap-16 
-          px-4 sm:px-6 md:px-8 lg:px-0
+           
         "
       >
         {/* === Left: Image === */}
@@ -34,7 +34,7 @@ const HowItsWork = () => {
             alt="How DiaCare Works"
             className="
               rounded-2xl w-full max-w-md md:max-w-3xl
-              hover:scale-105 transition-transform duration-700
+              hover:scale-102 transition-transform duration-700
             "
           />
         </div>
@@ -96,9 +96,8 @@ const HowItsWork = () => {
           <div className="mt-8 sm:mt-10 flex justify-start text-sm md:text-[10px] lg:text-[16px]">
             {/* Pass a prop to show the arrow only on lg screens */}
             <HeroButton
-              text="Is your workplace Diabetic Friendly?"
-              showArrowClass="hidden lg:inline-block"
-              href="https://worlddiabetesday.org/t2d-risk-test/"
+              text="Is Your Workplace Diabetic Friendly?"
+              href="https://worlddiabetesday.org/diabetes-workplace-quiz/"
             />
           </div>
         </div>

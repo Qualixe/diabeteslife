@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HeroButton from "./Button";
+import VideoGallery from "./VideoGallery";
 
 export default function SpreadSection() {
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function SpreadSection() {
 
   const facts = [
     "Provide a safe and private space for diabetes management and adequate storage for supplies.",
-    "Provide access to food, water, toilet facilities, and breaks for people to attend medical needs.",
+    "Provide access to food, water, toilet facilities, and breaks for people attend to medical needs.",
     "Foster an inclusive environment free from fear and diabetes-related stigma.",
     "Offer mental well-being support to employees.",
     "Make healthy food and snacks available in the workplace.",
@@ -38,13 +39,13 @@ export default function SpreadSection() {
   return (
     <section
       id="spread"
-      className="w-full bg-background py-10 sm:py-24 md:py-28 px-4  md:px-10 flex justify-center"
+      className="w-full bg-background py-12  md:py-20 px-4  md:px-10 flex justify-center"
     >
       <div className="max-w-[1200px] w-full flex flex-col items-center text-center sm:space-y-6">
 
         {/* === Heading Section === */}
         <div data-aos="fade-up" className="space-y-4">
-          <h1 className=" text-3xl md:text-6xl font-bold font-myfont leading-tight text-gray-900">
+          <h1 className=" text-2xl md:text-6xl font-bold font-myfont leading-tight text-gray-900">
             Spread the Word about Diabetes {" "}
             
             <span className="lg:block bg-accent bg-clip-text text-transparent animate-gradient-x">
@@ -64,18 +65,23 @@ export default function SpreadSection() {
           </p>
         </div>
 
+        <div data-aos="fade-up" data-aos-delay="200">
+          <VideoGallery />
+
+        </div>
+
         {/* === Section Title === */}
         <h2
           data-aos="fade-up"
           data-aos-delay="250"
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mt-10 font-myfont"
+          className="text-[18px] sm:text-3xl md:text-4xl font-bold text-black mt-10 font-myfont"
         >
           10 Ways to Support Diabetes Awareness at Work
         </h2>
 
         {/* === Two-Column Facts Layout === */}
         <div
-          className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full"
+          className="mt-5 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full"
           data-aos="fade-up"
           data-aos-delay="300"
         >
@@ -86,7 +92,7 @@ export default function SpreadSection() {
                 key={index}
                 data-aos="fade-right"
                 data-aos-delay={index * 100}
-                className="flex font-myfont items-center justify-start gap-4 bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-500 min-h-[100px] sm:min-h-[100px]"
+                className="flex font-myfont items-center justify-start gap-4 bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-500 min-h-auto md:min-h-[100px]"
               >
                 <div
                   className="font-bold rounded-full w-10 h-10 flex items-center justify-center text-base shadow-sm shrink-0"
@@ -112,7 +118,7 @@ export default function SpreadSection() {
                 key={index + 5}
                 data-aos="fade-left"
                 data-aos-delay={index * 100}
-                className="flex font-myfont items-center justify-start gap-4 bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-500 min-h-[100px] sm:min-h-[100px]"
+                className="flex font-myfont items-center justify-start gap-4 bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-500 min-h-auto sm:min-h-[100px]"
               >
                 <div
                   className="font-bold rounded-full w-10 h-10 flex items-center justify-center text-base shadow-sm shrink-0"
@@ -131,7 +137,14 @@ export default function SpreadSection() {
           </div>
 
         </div>
+                  {/* Button */}
+      <div className="max-w-[1000px] mx-auto pt-12 text-center text-sm">
+        <HeroButton text="Learn More" className="mx-auto"
+          href="https://worlddiabetesday.org/"
+        
+        />
 
+      </div>
 
       </div>
     </section>

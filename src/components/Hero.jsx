@@ -1,30 +1,49 @@
 import HeroButton from "./Button";
 
 const Hero = () => {
+  const handleCanPlay = (e) => {
+    const video = e.target;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        
+        video.poster = "/HeroBgFallback.avif";
+      });
+    }
+  };
+
   return (
     <section
       id="hero"
-      className="relative w-full md:h-screen   flex items-center justify-start overflow-hidden"
+      className="relative w-full md:h-screen px-4 lg:px-0 flex items-center justify-start overflow-hidden"
     >
-      {/*======== Background Video============== */}
+      {/* ======== Background Video ============== */}
       <video
-        className="absolute inset-0 w-full h-full  object-cover"
-        src="/HeroBG.mp4"
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         loop
         muted
         playsInline
         poster="/HeroBgFallback.avif"
-      />
+        onCanPlay={handleCanPlay}
+      >
+        <source src="/HeroBG.mp4" type="video/mp4" />
+        
+     
+        <img
+          src="/HeroBgFallback.avif"
+          alt="Hero background"
+          className="w-full h-full object-cover"
+        />
+      </video>
 
       {/* Overlay for readability */}
-      <div className="absolute inset-0  bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Content */}
       <div
         className="
           w-full max-w-[1200px] relative z-10 mx-auto 
-          px-4 sm:px-6 
           pt-40 sm:pt-28 md:pt-32
           text-left text-white
         "
@@ -38,7 +57,6 @@ const Hero = () => {
           "
         >
           Know More and Do More
-          
           <span className="ml-2.5 lg:ml-0 lg:block bg-accent bg-clip-text text-transparent animate-gradient-x">
             for Diabetes at Work
           </span>
@@ -48,7 +66,7 @@ const Hero = () => {
         <p
           className="
             text-md sm:text-base md:text-2xl 
-            mb-4 md:mb-9  max-w-lg leading-relaxed text-gray-100 
+            mb-4 md:mb-9 max-w-lg leading-relaxed text-gray-100 
             pt-4 md:pt-5 font-myfont font-regular
           "
         >
@@ -57,10 +75,11 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <div className="text-sm md:text-[16px]  md:pb-0 md:mb-0 mb-10">
-        <HeroButton text="Are you in Diabetes Risk?"
-          href="https://worlddiabetesday.org/t2d-risk-test/"
-        />
+        <div className="text-sm md:text-[16px] md:pb-0 md:mb-0 mb-10">
+          <HeroButton
+            text="Are You at Risk of Diabetes?"
+            href="https://worlddiabetesday.org/t2d-risk-test/"
+          />
         </div>
       </div>
     </section>

@@ -16,21 +16,19 @@ function App() {
 
 
   return (
-    <>
+    <div className='overflow-x-hidden'> 
+    
       <Header />
       <Hero />
       <Suspense fallback={<LoadingSpinner />}>
         <HowItsWork />
       </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
-        <VideoGallery />
-      </Suspense>   
       <Suspense fallback={<LoadingSpinner />}>
         <SpreadSection />
       </Suspense>
-      
-
-    </>
+  
+  
+    </div>
   )
 }
 
