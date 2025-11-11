@@ -60,7 +60,7 @@ export default function VideoGallery() {
 
   return (
     <>
-      <div className="max-w-[1200px] mx-auto text-center space-y-12">
+      <div className="max-w-[1200px] mx-auto text-center space-y-8">
         <div
           onClick={openModal}
           className="group relative mx-auto w-full max-w-4xl rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-500"
