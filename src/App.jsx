@@ -20,13 +20,13 @@ function App() {
     
       <Header />
       <Hero />
-      <Suspense fallback={<LoadingSpinner />}>
-        <HowItsWork />
-      </Suspense>
+
       <Suspense fallback={<LoadingSpinner />}>
         <SpreadSection />
       </Suspense>
-  
+      <Suspense fallback={<LoadingSpinner />}>
+        <HowItsWork />
+      </Suspense>
   
     </div>
   )
