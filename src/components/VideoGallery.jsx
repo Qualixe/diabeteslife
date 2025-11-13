@@ -6,7 +6,7 @@ export default function VideoGallery() {
   const video = {
     id: 1,
     title: "Doctor Consulting a Patient",
-    src: "/WorldDiabetesDay.mp4",
+    src: "/WorldDiabetesDayFinal2025.mp4",
     poster: "/WorldDiabetesDay.avif",
   };
 
