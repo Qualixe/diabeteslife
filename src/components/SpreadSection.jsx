@@ -43,49 +43,27 @@ export default function SpreadSection() {
     >
       <div className="max-w-[1200px] w-full flex flex-col items-center text-center sm:space-y-6">
 
-        {/* === Heading Section === */}
-        <div data-aos="fade-up" className="space-y-4">
-          <h1 className=" text-2xl md:text-6xl font-bold font-myfont leading-tight text-gray-900">
-            Spread the Word about Diabetes {" "}
-            
-            <span className="lg:block bg-accent bg-clip-text text-transparent animate-gradient-x">
-              in November
-            </span>{" "}
 
-          </h1>
+        
 
-          <p
-            data-aos="fade-up"
-            data-aos-delay="150"
-            className="font-myfont text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
-          >
-            November is <strong>Diabetes Awareness Month</strong> — a time to
-            inspire action, understanding, and compassion. Let’s work together
-            to make our workplaces healthier and more supportive for everyone.
-          </p>
-        </div>
+        
 
-        <div data-aos="fade-up" data-aos-delay="200">
-          <VideoGallery />
 
-        </div>
-
-        {/* === Section Title === */}
         <h2
           data-aos="fade-up"
           data-aos-delay="250"
-          className="text-[18px] sm:text-3xl md:text-4xl font-bold text-black mt-10 font-myfont"
+          className=" text-2xl md:text-6xl font-bold font-myfont leading-tight text-gray-900"
         >
-          10 Ways to Support Diabetes Awareness at Work
+          10 Ways to Support Diabetes <span className="lg:block bg-accent bg-clip-text text-transparent animate-gradient-x">Awareness at Work</span> 
         </h2>
 
-        {/* === Two-Column Facts Layout === */}
+
         <div
           className="mt-5 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          {/* === Left Column: 1–5 === */}
+
           <div className="space-y-4">
             {facts.slice(0, 5).map((fact, index) => (
               <div

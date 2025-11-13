@@ -27,6 +27,7 @@ export default function VideoGallery() {
 
   const modal = selectedVideo ? (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+    
       {/* Fullscreen backdrop */}
       <div
         onClick={closeModal}

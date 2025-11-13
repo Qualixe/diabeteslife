@@ -10,7 +10,7 @@ import './index.css'
 
 const HowItsWork = lazy(() => import('./components/HowItsWork'))
 const SpreadSection = lazy(() => import('./components/SpreadSection'))
-const VideoGallery = lazy(() => import('./components/VideoGallery'))
+const VideoSection = lazy(() => import('./components/VideoSection'))
 
 function App() {
 
@@ -22,10 +22,14 @@ function App() {
       <Hero />
 
       <Suspense fallback={<LoadingSpinner />}>
-        <SpreadSection />
+       <VideoSection />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <HowItsWork />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+      <SpreadSection />
+        
       </Suspense>
   
     </div>
