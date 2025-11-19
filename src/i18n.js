@@ -12,6 +12,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources: { en: { translation: en }, bn: { translation: bn } },
+    lng: "en", // Add this line - forces English as default
     fallbackLng: "en",
     detection: {
       order: ["localStorage", "querystring", "navigator"],
