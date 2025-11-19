@@ -6,6 +6,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 
 import './index.css'
+import './i18n'
+import LanguageFontProvider from './components/LanguageFontProvider'
 
 
 const HowItsWork = lazy(() => import('./components/HowItsWork'))
@@ -16,6 +18,7 @@ function App() {
 
 
   return (
+    <LanguageFontProvider>
     <div className='overflow-x-hidden'> 
     
       <Header />
@@ -33,6 +36,7 @@ function App() {
       </Suspense>
   
     </div>
+    </LanguageFontProvider>
   )
 }
 

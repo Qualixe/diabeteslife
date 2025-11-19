@@ -1,0 +1,44 @@
+{
+    "nav": {
+        "home": "Home"
+    },
+    "hero": {
+        "title": "Know More and Do More",
+        "subtitle": "for Diabetes at Work",
+        "description": "Join our movement to raise awareness and promote a healthier future for everyone.",
+        "button": "Is Your Workplace Diabetic Friendly?"
+    },
+    "video": {
+        "title": "Spread the Word about Diabetes",
+        "subtitle": "in November",
+        "description": "November is <strong> Diabetes  Awareness Month </strong> — a time to inspire action, understanding, and compassion. Let’s work together to make our workplaces healthier and more supportive for everyone."
+    },
+    "how": {
+        "title": "Diabetes and",
+        "subtitle": "Wellbeing at Work",
+        "description": "If you have had a severe allergic reaction (anaphylaxis) or an immediate allergic reaction to any ingredient in the vaccine you are scheduled to receive, you should not get that vaccine.",
+        "points": [
+            "<strong>7 in 10</strong> people living with diabetes are of <strong>working age.</strong>",
+            "<strong>3 in 4</strong> people living with diabetes experience depression.",
+            "<strong>4 in 5</strong> people living with diabetes experience <strong>burnout.</strong>"
+        ],
+        "cta": "Is Your Workplace Diabetic Friendly?"
+    },
+    "spread": {
+        "title": "10 Ways to Support Diabetes",
+        "subtitle": "Awareness at Work",
+        "facts": [
+            "Provide a safe and private space for diabetes management and adequate storage for supplies.",
+            "Provide access to food, water, toilet facilities, and breaks for people to attend to medical needs.",
+            "Foster an inclusive environment free from fear and diabetes-related stigma.",
+            "Offer mental well-being support to employees.",
+            "Make healthy food and snacks available in the workplace.",
+            "Encourage physical activity through programs and incentives.",
+            "Have a trained first aider and the necessary supplies to treat a diabetes-related emergency.",
+            "Offer flexible working arrangements (e.g., part-time or remote work).",
+            "Make information about diabetes available in the workplace.",
+            "Organize diabetes screenings."
+        ],
+        "cta": "Learn More"
+    }
+}

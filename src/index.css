@@ -68,24 +68,34 @@
   font-style: normal;
   font-display: swap;
 }
-body{
-  font-family: 'Apis' Arial;
+@font-face {
+  font-family: 'Anek Bangla';
+  src: url('/fonts/Anek-Bangla.ttf') format('truetype');
+  font-weight: 100 900; /* Variable range */
+  font-style: normal;
+  font-display: swap;
 }
-
-
 
 @theme {
   --color-primary:#081965;
   --color-secondary: #F2F2F2;
   --color-accent: #3b96de;
   --color-background:#e5e7ef;
-
-  --font-myfont: "Apis", Arial;
   --color-one:#3b96de;
   --color-two:#235ad2;
   --color-three:#eea7bf;
   --color-four:#ccc5bd;
   --color-five:#939aa7;
+  --font-apis:'Apis','sanserif';
+  --font-anek:'Anek Bangla';
   
 
+}
+@layer base {
+  .font-apis {
+    font-family: var(--font-apis);
+  }
+  .font-anek {
+    font-family: var(--font-anek);
+  }
 }

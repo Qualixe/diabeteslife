@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HeroButton from "./Button";
-import VideoGallery from "./VideoGallery";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function SpreadSection() {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,56 +16,40 @@ export default function SpreadSection() {
     });
   }, []);
 
-  const facts = [
-    "Provide a safe and private space for diabetes management and adequate storage for supplies.",
-    "Provide access to food, water, toilet facilities, and breaks for people attend to medical needs.",
-    "Foster an inclusive environment free from fear and diabetes-related stigma.",
-    "Offer mental well-being support to employees.",
-    "Make healthy food and snacks available in the workplace.",
-    "Encourage physical activity through programs and incentives.",
-    "Have a trained first aider and the necessary supplies to treat a diabetes-related emergency.",
-    "Offer flexible working arrangements (e.g., part-time or remote work).",
-    "Make information about diabetes available in the workplace.",
-    "Organize diabetes screenings.",
-  ];
+  // Facts from translation JSON
+  const facts = t("spread.facts", { returnObjects: true });
 
   const colorVars = [
     "var(--color-one)",
     "var(--color-two)",
     "var(--color-three)",
     "var(--color-four)",
-    "var(--color-five)"
+    "var(--color-five)",
   ];
-
 
   return (
     <section
       id="spread"
-      className="w-full bg-background py-12  md:py-20 px-4  md:px-10 flex justify-center"
+      className="w-full bg-background py-12 md:py-20 px-4 md:px-10 flex justify-center"
     >
       <div className="max-w-[1200px] w-full flex flex-col items-center text-center sm:space-y-6">
-
-
         
-
-        
-
-
-        <h2
+        {/* Title */}
+              <h2
           data-aos="fade-up"
           data-aos-delay="250"
-          className=" text-2xl md:text-6xl font-bold font-myfont leading-tight text-gray-900"
+          className=" text-2xl md:text-6xl font-bold  leading-tight text-gray-900"
         >
-          10 Ways to Support Diabetes <span className="lg:block bg-accent bg-clip-text text-transparent animate-gradient-x">Awareness at Work</span> 
+          {t('spread.title')} <span className="lg:block bg-accent bg-clip-text text-transparent animate-gradient-x">{t('spread.subtitle')}</span> 
         </h2>
 
-
+        {/* Facts Grid */}
         <div
           className="mt-5 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-
+          {/* Left Column 1–5 */}
           <div className="space-y-4">
             {facts.slice(0, 5).map((fact, index) => (
               <div
@@ -82,14 +68,13 @@ export default function SpreadSection() {
                   {index + 1}
                 </div>
                 <p className="text-gray-700 text-sm sm:text-base font-medium leading-relaxed text-left">
-                  {fact}
+                  <Trans i18nKey={`spread.facts.${index}`} />
                 </p>
               </div>
             ))}
           </div>
 
-        
-          {/* === Right Column: 6–10 === */}
+          {/* Right Column 6–10 */}
           <div className="space-y-4">
             {facts.slice(5).map((fact, index) => (
               <div
@@ -108,22 +93,21 @@ export default function SpreadSection() {
                   {index + 6}
                 </div>
                 <p className="text-gray-700 text-sm sm:text-base font-medium leading-relaxed text-left">
-                  {fact}
+                  <Trans i18nKey={`spread.facts.${index + 5}`} />
                 </p>
               </div>
             ))}
           </div>
-
         </div>
-                  {/* Button */}
-      <div className="max-w-[1000px] mx-auto pt-12 text-center text-sm">
-        <HeroButton text="Learn More" className="mx-auto"
-          href="https://worlddiabetesday.org/"
-        
-        />
 
-      </div>
-
+        {/* CTA Button */}
+        <div className="max-w-[1000px] mx-auto pt-12 text-center text-sm">
+          <HeroButton
+            text={t("spread.cta")}
+            className="mx-auto"
+            href="https://worlddiabetesday.org/"
+          />
+        </div>
       </div>
     </section>
   );
