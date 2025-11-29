@@ -53,7 +53,7 @@ const Hero = () => {
         <h1
           className="
             font-bold  mb-2 md:mb-5 drop-shadow-lg leading-tight
-            max-w-3xl
+            max-w-4xl
             text-3xl sm:text-5xl md:text-6xl lg:text-[60px]
           "
         >
@@ -67,7 +67,7 @@ const Hero = () => {
         <p
           className="
             text-md sm:text-base md:text-2xl 
-            mb-4 md:mb-9 max-w-lg leading-relaxed text-gray-100 
+            mb-4 md:mb-9 max-w-xl leading-relaxed text-gray-100 
             pt-4 md:pt-5  font-regular
           "
         >
