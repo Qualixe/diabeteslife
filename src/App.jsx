@@ -24,7 +24,9 @@ function App() {
       <Header />
       <Hero />
 
-     
+      <Suspense fallback={<LoadingSpinner />}>
+        <VideoSection />
+      </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <HowItsWork />
       </Suspense>

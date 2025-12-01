@@ -26,12 +26,12 @@ export default function VideoGallery() {
   };
 
   const modal = selectedVideo ? (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center">
     
       {/* Fullscreen backdrop */}
       <div
         onClick={closeModal}
-        className="absolute inset-0 bg-black/70 backdrop-blur-[12px] transition-all duration-500"
+        className="absolute inset-0 bg-black/70 backdrop-blur-md transition-all duration-500"
         style={{ WebkitBackdropFilter: "blur(12px)" }}
       ></div>
 
